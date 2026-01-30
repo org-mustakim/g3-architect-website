@@ -3,7 +3,7 @@
 
 /* *{
     padding: 0px;
-    margin: 0px;
+    margin:  0px;
 } */
 
 .work-sans-font {
@@ -12,22 +12,36 @@
   font-weight: 400;
   font-style: normal;
 }
+main{
+    max-width: 1140px;
+    margin: 0px auto;
+}
 /* shared styles */
 .flex{
     display: flex;
 }
-.exp-btn{
+.btn-primary{
     background-color: #FF900E;
     border: none;
     border-radius: 8px;
     height: 64px;
     width: 180px;
-}
-.btn{
     font-size: 1.25rem;
     font-weight: 600;
-    text-decoration: none;
     color: #FFFFFF;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.exp2-btn{
+    display: flex;
+    justify-content: center;
+}
+
+main > section{
+    margin-top: 130px;
 }
 /* colors used in */
 .header-color{
@@ -103,14 +117,79 @@
     text-align: center;
     padding-bottom: 32px;
 }
-.exp2-btn{
-    display: flex;
-    justify-content: center;
-}
+
 .banner-image-container{
     padding-top: 50px;
     justify-content: center;
 }
 .banner-image{
     width: 100%;
+}
+
+/* feature and teams realted styles */
+
+
+.teams{
+    align-items: center;
+}
+.team-image-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.feature-title{
+    margin-bottom: 24px;
+}
+.feature-description{
+    margin-bottom: 32px;
+}
+
+.our-features{
+    margin-left: 76px;
+    max-width: 537px;
+}
+.regular{
+    font-size: 1rem;
+    line-height: 26px;
+}
+.medium{
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+.bold{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.bold-orange{
+    color: #FF900E;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+/* small device */
+
+@media screen and (max-width: 576px){
+    .navbar, 
+    .nav-links, 
+    .teams{
+        flex-direction: column;
+    }
+    .team-image-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .our-features{
+        margin-left: 20px;
+    }
+}
+
+/* medium device */
+
+@media screen and (min-width:576px) and (max-width:992px) {
+    .teams{
+        flex-direction: column;
+    }
+    .our-features{
+        margin: 30px auto;
+    }
 }
