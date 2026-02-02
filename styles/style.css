@@ -1,10 +1,10 @@
 /* top styles */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* *{
+*{
     padding: 0px;
     margin:  0px;
-} */
+}
 
 .work-sans-font {
     font-family: "Work Sans", sans-serif;
@@ -118,7 +118,9 @@ main>section {
 .banner,
 .facts-container,
 .sponsor-content,
-.sponsor-images {
+.sponsor-images,
+.loving-features,
+.footer {
     max-width: 1440px;
     margin: 0px auto;
 }
@@ -238,6 +240,54 @@ main>section {
     margin-bottom: 5px;
 }
 
+/* Loving Features style */
+
+.loving-features{
+    /* border: 1px solid red; */
+    background-color: #F3F3F3;
+    margin-top: 146px;
+    margin-bottom: 114px;
+    gap: 50px;
+}
+.le-title{
+    border-left: 5px solid #FF900E;
+    padding: 21px;
+}
+.le-description{
+    margin-top: 24px;
+    margin-bottom: 30px;
+}
+.le-card{
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+.le-card-title{
+    margin-top: 0px;
+    margin-bottom: 9px;
+  
+}
+.le-image-container,.le-image{
+    width: 100%;
+}
+#experience-badge{
+    margin: -69px;
+    border: none;
+    border-radius: 8px;
+    width: 342px;
+    height: 200px;
+    background-color: #FF900E;
+    color: #FFFFFF;
+}
+
+.experience-badge-year{
+    font-size: 65px;
+    font-weight: 700;
+}
+.experience-badge-exp{
+    font-size: 25px;
+}
 /* Sponsor related styles */
 
 .sponsor-title, .sponsor-description{
@@ -261,12 +311,25 @@ main>section {
     filter: grayscale(100%);
 }
 
+/* Footer style */
+
+.footer{
+    height: 100px;
+    max-width: 1400px;
+    background-color: #FFF4E7;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 /* small device */
 
 @media screen and (max-width: 576px) {
 
-    .navbar, .nav-links, .teams {
+    body{
+        padding-left: 10px;
+    }
+    .navbar, .nav-links, .teams, .loving-features, .le-content {
         flex-direction: column;
     }
 
@@ -288,6 +351,19 @@ main>section {
     }
     .sponsor-images{
         gap: 50px;
+    }
+    .le-image{
+        width: 100%;
+    }
+    .loving-features{
+        width: 100%;
+        
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #experience-badge{
+    margin-left: 50px;
     }
 }
 
